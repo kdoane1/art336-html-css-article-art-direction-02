@@ -3,10 +3,15 @@ Base Rules
 	A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudoclasses. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
 */
 html {
-    background-color: $background-color;
+    
+    //background-color: $background-color;  
 }
 
 body {
+    background:url("..img/background-vormgevers_detail.jpg");
+    //background-size: cover;
+    //background-position: center;
+    //background-repeat: repeat;
     color: $color;
     box-sizing: border-box;
     @include body-font-regular;
@@ -15,14 +20,37 @@ body {
     margin: 0 auto;
     max-width: 1024px;
     width: 100%;
+    line-height: 1.2;
+    
 }
 
 h1 {
-    @include fontSize(60px);
+    @include fontSize(65px);
+    @include headline-font;   
+}
+
+h2 {
+    color:  $header-color;
+    @include fontSize(40px);
     @include headline-font;
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+cite {
+@include fontSize(15px);
+}
+
+blockquote {
+      //background-color: $blockquote-color;
+    //color: $blockquote-font-color;
+    border-top: 3px $color solid;
+    border-bottom: 3px $color solid;
+    padding: 16px;
+    margin: 0;
+    @include fontSize(20px);  
+
 }

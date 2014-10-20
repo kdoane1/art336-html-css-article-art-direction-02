@@ -6,22 +6,26 @@ Layout Rules
 
 nav[role="navigation"] {
     text-align: right;
-}
-nav[role="navigation"] ul, .contact ul {
-    list-style-type: none;
-    margin: 0; 
-    padding: 0;
+    height: 10%;
+    margin: 15px;
+    display: inline;
 }
 
-nav[role="navigation"] ul {
-    margin-top: 12px;
-}
+//nav[role="navigation"] ul, .contact ul {
+  //  list-style-type: none;
+    //margin: 0; 
+    //padding: 0;
+//}
 
-nav[role="navigation"] ul li, .contact ul li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
+//nav[role="navigation"] ul {
+  //  margin-top: 12px;
+//}
+
+//nav[role="navigation"] ul li, .contact ul li {
+//    display: inline-block;
+  //  margin: 0;
+    //padding: 0;
+//}
 
 header[role="banner"]{
     margin: 30px 0 100px 0;
@@ -36,9 +40,11 @@ header[role="banner"]{
 }
 
 main[role="main"] {
-    @media (min-width: 700px) {
+    @media (min-width: 500px) {
         float: right;
-        width: 60%;
+        width: 50%;
+       margin-top: 30px;
+        
     }
 
 }
@@ -47,22 +53,24 @@ footer[role="contentinfo"] {
     @media (min-width: 700px) {
         float: left;
         width: 100%;
+        display: inline;
+        //text-align: center;
     }
 
 }
 
-.contact svg {
-    width: 24px;
-    height: 24px;
+//.contact svg {
+    //width: 24px;
+    //height: 24px;
+//}
+
+a:hover svg path {
+fill: red;
+transition: fill 400ms linear;
 }
 
-.contact svg path{
-    fill: $background-color;
-    transition: fill 400ms linear;
-}
-
-.contact a:hover svg path{
-    fill: darken($background-color, 12%);
-    transition: fill 400ms linear;
-}
+//.contact a:hover svg path{
+  //  fill: darken($background-color, 12%);
+    //transition: fill 400ms linear;
+//}
 

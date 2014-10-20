@@ -9,9 +9,17 @@ Globals
     @return #{$remSize}rem;
 }
 
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
 // Site variable
-$color: #242424;
+$color: #6a6767;
 $background-color: #fcfcfc;
+$header-color: #62f2fd;
+
 
 
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
@@ -33,14 +41,23 @@ $background-color: #fcfcfc;
     font-weight: 700;
 }
     
-@font-face {
+@mixin headline-font {
   font-family: 'Righteous';
   font-style: normal;
   font-weight: 400;
   src: local('Righteous'), local('Righteous-Regular'), url(http://fonts.gstatic.com/s/righteous/v5/w5P-SI7QJQSDqB3GziL8XbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 
-
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+.testing {
+    @include background('/img/background-vormgevers_detail.jpg');
+}
 
 //@keyframes colorchange-background {
   //  0% { background-color: $background-color;}
